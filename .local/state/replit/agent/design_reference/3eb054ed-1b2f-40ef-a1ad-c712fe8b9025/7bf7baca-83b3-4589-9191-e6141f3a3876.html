@@ -1,0 +1,519 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum9x - Think Smart. Learn Fast. Go Quantum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif'],
+                },
+                colors: {
+                    'quantum-red': '#ef4444',
+                    'quantum-orange': '#f97316',
+                    'quantum-dark': '#1a1a1a',
+                    'quantum-gray': '#2d2d2d',
+                },
+                animation: {
+                    'float': 'float 6s ease-in-out infinite',
+                    'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    'glow': 'glow 2s ease-in-out infinite alternate',
+                }
+            }
+        }
+    };
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #ef444450; }
+            to { box-shadow: 0 0 30px #ef444480, 0 0 40px #ef444430; }
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-dark {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ef4444, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .floating-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-quantum-dark via-quantum-gray to-quantum-dark text-white overflow-x-hidden">
+    
+    <!-- @COMPONENT: Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-dark">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Q9X Logo in Corner -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-white rounded-lg p-2 shadow-lg animate-pulse-slow">
+                        <!-- Q9X logo representation -->
+                        <div class="w-full h-full flex items-center justify-center">
+                            <span class="text-quantum-red font-bold text-lg">Q</span>
+                            <span class="text-quantum-red font-bold text-xs">9X</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-quantum-red transition-colors duration-300 font-medium">Home</a>
+                    <a href="#about" class="hover:text-quantum-red transition-colors duration-300 font-medium">About</a>
+                    <a href="#courses" class="hover:text-quantum-red transition-colors duration-300 font-medium">Courses</a>
+                    <a href="#team" class="hover:text-quantum-red transition-colors duration-300 font-medium">Team</a>
+                    <a href="#contact" class="hover:text-quantum-red transition-colors duration-300 font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white hover:text-quantum-red transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+    
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full opacity-20 animate-float"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-quantum-orange to-quantum-red rounded-full opacity-30 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-quantum-red rounded-full opacity-25 animate-float" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <!-- Main Quantum9x Logo and Branding -->
+            <div class="mb-8 animate-glow">
+                <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tight">
+                    <span class="gradient-text">QUANTUM</span><span class="text-white">9X</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-quantum-red to-quantum-orange mx-auto mb-6"></div>
+                <p class="text-xl md:text-2xl font-light text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    THINK SMART. LEARN FAST. GO QUANTUM
+                </p>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
+                    Revolutionize your learning experience with cutting-edge educational technology. 
+                    Unlock your potential with quantum-speed learning methodologies.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#courses" class="bg-gradient-to-r from-quantum-red to-quantum-orange text-white px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-quantum-red/25 transition-all duration-300 hover:scale-105 animate-glow">
+                        <i class="fas fa-rocket mr-3"></i>Start Learning
+                    </a>
+                    <a href="#about" class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 floating-card">
+                        <i class="fas fa-info-circle mr-3"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-quantum-red text-2xl"></i>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+    
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Why Choose <span class="gradient-text">Quantum9x</span>?
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-quantum-red to-quantum-orange mx-auto mb-6"></div>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    We're not just another educational platform. We're the quantum leap your learning journey needs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Feature Card 1 -->
+                <div class="glass-effect p-8 rounded-2xl floating-card">
+                    <div class="w-16 h-16 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full flex items-center justify-center mb-6 mx-auto animate-pulse-slow">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Think Smart</h3>
+                    <p class="text-gray-400 text-center leading-relaxed">
+                        Develop critical thinking skills with our innovative problem-solving methodologies.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 2 -->
+                <div class="glass-effect p-8 rounded-2xl floating-card" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full flex items-center justify-center mb-6 mx-auto animate-pulse-slow">
+                        <i class="fas fa-bolt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Learn Fast</h3>
+                    <p class="text-gray-400 text-center leading-relaxed">
+                        Accelerated learning techniques that help you master concepts in record time.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 3 -->
+                <div class="glass-effect p-8 rounded-2xl floating-card" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full flex items-center justify-center mb-6 mx-auto animate-pulse-slow">
+                        <i class="fas fa-atom text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Go Quantum</h3>
+                    <p class="text-gray-400 text-center leading-relaxed">
+                        Transcend traditional learning boundaries with quantum-inspired educational approaches.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+    
+    <!-- @COMPONENT: Courses Section -->
+    <section id="courses" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Our <span class="gradient-text">Quantum</span> Courses
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-quantum-red to-quantum-orange mx-auto mb-6"></div>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Transform your skills with our revolutionary course offerings designed for the quantum age.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Course Card 1 -->
+                <div class="glass-effect p-6 rounded-2xl floating-card group cursor-pointer" data-event="click:redirectToWhatsApp">
+                    <div class="bg-gradient-to-r from-quantum-red to-quantum-orange p-4 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quantum Programming</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Master the art of programming with quantum-speed efficiency and modern frameworks.</p>
+                    <div class="flex items-center text-quantum-red font-semibold group-hover:text-quantum-orange transition-colors">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                
+                <!-- Course Card 2 -->
+                <div class="glass-effect p-6 rounded-2xl floating-card group cursor-pointer" data-event="click:redirectToWhatsApp">
+                    <div class="bg-gradient-to-r from-quantum-red to-quantum-orange p-4 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Science Mastery</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Unlock insights from data using cutting-edge analytics and machine learning techniques.</p>
+                    <div class="flex items-center text-quantum-red font-semibold group-hover:text-quantum-orange transition-colors">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                
+                <!-- Course Card 3 -->
+                <div class="glass-effect p-6 rounded-2xl floating-card group cursor-pointer" data-event="click:redirectToWhatsApp">
+                    <div class="bg-gradient-to-r from-quantum-red to-quantum-orange p-4 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-robot text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI & Machine Learning</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Dive deep into artificial intelligence and create intelligent systems that think.</p>
+                    <div class="flex items-center text-quantum-red font-semibold group-hover:text-quantum-orange transition-colors">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                
+                <!-- Course Card 4 -->
+                <div class="glass-effect p-6 rounded-2xl floating-card group cursor-pointer" data-event="click:redirectToWhatsApp">
+                    <div class="bg-gradient-to-r from-quantum-red to-quantum-orange p-4 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-mobile-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile Development</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Build powerful mobile applications that reach millions of users worldwide.</p>
+                    <div class="flex items-center text-quantum-red font-semibold group-hover:text-quantum-orange transition-colors">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                
+                <!-- Course Card 5 -->
+                <div class="glass-effect p-6 rounded-2xl floating-card group cursor-pointer" data-event="click:redirectToWhatsApp">
+                    <div class="bg-gradient-to-r from-quantum-red to-quantum-orange p-4 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cybersecurity</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Protect digital assets with advanced security techniques and ethical hacking.</p>
+                    <div class="flex items-center text-quantum-red font-semibold group-hover:text-quantum-orange transition-colors">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                
+                <!-- Course Card 6 -->
+                <div class="glass-effect p-6 rounded-2xl floating-card group cursor-pointer" data-event="click:redirectToWhatsApp">
+                    <div class="bg-gradient-to-r from-quantum-red to-quantum-orange p-4 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-cloud text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cloud Computing</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Master cloud architectures and deploy scalable applications in the cloud.</p>
+                    <div class="flex items-center text-quantum-red font-semibold group-hover:text-quantum-orange transition-colors">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WhatsApp CTA -->
+            <div class="text-center">
+                <a href="https://wa.me/918019234832" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105">
+                    <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+                    Get Course Details on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Courses Section -->
+    
+    <!-- @COMPONENT: Team Section -->
+    <section id="team" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Meet Our <span class="gradient-text">Quantum</span> Team
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-quantum-red to-quantum-orange mx-auto mb-6"></div>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    The visionary minds behind Quantum9x, dedicated to revolutionizing education.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Founder Card -->
+                <div class="glass-effect p-8 rounded-2xl text-center floating-card">
+                    <div class="w-32 h-32 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full mx-auto mb-6 flex items-center justify-center animate-pulse-slow">
+                        <i class="fas fa-user-tie text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Founder</h3>
+                    <p class="text-quantum-red font-semibold mb-4">Visionary Leader</p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Driving innovation in educational technology with a passion for quantum-speed learning.
+                    </p>
+                    <a href="https://www.instagram.com/simply_bittu?igsh=MWd1Mzg1emdvanFuZQ==" target="_blank" class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
+                        <i class="fab fa-instagram mr-2 text-lg"></i>
+                        Follow on Instagram
+                    </a>
+                </div>
+                
+                <!-- Co-Founder Card -->
+                <div class="glass-effect p-8 rounded-2xl text-center floating-card" style="animation-delay: 0.2s;">
+                    <div class="w-32 h-32 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full mx-auto mb-6 flex items-center justify-center animate-pulse-slow">
+                        <i class="fas fa-user-graduate text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Co-Founder</h3>
+                    <p class="text-quantum-red font-semibold mb-4">Innovation Expert</p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Architecting the future of learning with cutting-edge technological solutions.
+                    </p>
+                    <a href="https://www.instagram.com/phani_0303_?igsh=MXNhc3VtYThubmpveA==" target="_blank" class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
+                        <i class="fab fa-instagram mr-2 text-lg"></i>
+                        Follow on Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Team Section -->
+    
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Get In <span class="gradient-text">Touch</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-quantum-red to-quantum-orange mx-auto mb-6"></div>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Ready to start your quantum learning journey? Let's connect and explore the possibilities.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- WhatsApp Contact -->
+                <div class="glass-effect p-6 rounded-2xl text-center floating-card">
+                    <div class="w-16 h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center animate-pulse-slow">
+                        <i class="fab fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">WhatsApp</h3>
+                    <p class="text-gray-400 mb-4">Direct messaging for instant support</p>
+                    <a href="https://wa.me/918019234832" class="text-green-500 font-semibold hover:text-green-400 transition-colors">
+                        +91 8019234832
+                    </a>
+                </div>
+                
+                <!-- Instagram -->
+                <div class="glass-effect p-6 rounded-2xl text-center floating-card">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center animate-pulse-slow">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Instagram</h3>
+                    <p class="text-gray-400 mb-4">Follow our journey and updates</p>
+                    <p class="text-quantum-red font-semibold">@quantum9x</p>
+                </div>
+                
+                <!-- Email -->
+                <div class="glass-effect p-6 rounded-2xl text-center floating-card">
+                    <div class="w-16 h-16 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full mx-auto mb-4 flex items-center justify-center animate-pulse-slow">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Email</h3>
+                    <p class="text-gray-400 mb-4">Professional inquiries</p>
+                    <p class="text-quantum-red font-semibold">info@quantum9x.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+    
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-quantum-dark/50 py-12 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <!-- Quantum9x Branding -->
+                <div class="mb-6">
+                    <h3 class="text-3xl font-black mb-2">
+                        <span class="gradient-text">QUANTUM</span><span class="text-white">9X</span>
+                    </h3>
+                    <p class="text-gray-400">Think Smart. Learn Fast. Go Quantum</p>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.instagram.com/simply_bittu?igsh=MWd1Mzg1emdvanFuZQ==" target="_blank" class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-instagram text-white text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/phani_0303_?igsh=MXNhc3VtYThubmpveA==" target="_blank" class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-instagram text-white text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/918019234832" class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-whatsapp text-white text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Quantum9x. All rights reserved. | Revolutionizing Education Through Technology
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+    
+    <!-- @COMPONENT: Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-quantum-red to-quantum-orange rounded-full flex items-center justify-center shadow-2xl hover:shadow-quantum-red/25 transition-all duration-300 hover:scale-110 opacity-0 pointer-events-none z-50">
+        <i class="fas fa-chevron-up text-white"></i>
+    </button>
+    <!-- @END_COMPONENT: Back to Top Button -->
+    
+    <script>
+    // Back to Top Functionality
+    (function() {
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
+                backToTopButton.classList.add('opacity-100');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'pointer-events-none');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    })();
+    
+    // Smooth Scrolling for Navigation Links
+    (function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    })();
+    
+    // Course Cards WhatsApp Redirect
+    (function() {
+        document.querySelectorAll('[data-event="click:redirectToWhatsApp"]').forEach(card => {
+            card.addEventListener('click', () => {
+                const message = encodeURIComponent('Hi! I\'m interested in learning more about the courses offered at Quantum9x. Could you please provide more details?');
+                window.open(`https://wa.me/918019234832?text=${message}`, '_blank');
+            });
+        });
+    })();
+    
+    // Mobile Menu Toggle
+    (function() {
+        const menuButton = document.querySelector('.md\\:hidden');
+        const nav = document.querySelector('nav');
+        
+        if (menuButton && nav) {
+            menuButton.addEventListener('click', () => {
+                // TODO: Implement mobile menu toggle functionality
+                console.log('Mobile menu toggle clicked');
+            });
+        }
+    })();
+    </script>
+</body>
+</html>

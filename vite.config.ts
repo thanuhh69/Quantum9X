@@ -34,4 +34,5 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
+  base: "/Quantum9X/", // ✅ Required for GitHub Pages
 });
